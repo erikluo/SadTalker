@@ -35,7 +35,8 @@
 
 </div>
 
-
+## 源码阅读
+- [Talking-Face-Generation系列之SadTalker代码浅读篇](https://zhuanlan.zhihu.com/p/635982234)
 
 ## 🔥 Highlight
 

@@ -10,6 +10,7 @@ def class2onehot(idx, class_num):
     onehot.scatter_(1, idx, 1)
     return onehot
 
+# CVAE编码器、解码器的代码实现
 class CVAE(nn.Module):
     def __init__(self, cfg):
         super().__init__()

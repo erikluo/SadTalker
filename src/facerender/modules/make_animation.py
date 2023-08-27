@@ -34,6 +34,7 @@ def headpose_pred_to_degree(pred):
     degree = torch.sum(pred*idx_tensor, 1) * 3 - 99
     return degree
 
+# 这些参数构成了头部动起来的旋转矩阵
 def get_rotation_matrix(yaw, pitch, roll):
     yaw = yaw / 180 * 3.14
     pitch = pitch / 180 * 3.14
@@ -98,7 +99,7 @@ def keypoint_transformation(kp_canonical, he, wo_exp=False):
     return {'value': kp_transformed}
 
 
-
+# 合成阶段
 def make_animation(source_image, source_semantics, target_semantics,
                             generator, kp_detector, he_estimator, mapping, 
                             yaw_c_seq=None, pitch_c_seq=None, roll_c_seq=None,
